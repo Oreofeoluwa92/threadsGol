@@ -27,11 +27,6 @@ int main(int argc, char* argv[]) {
     cbreak();
     noecho();
     keypad(stdscr, TRUE);
-    curs_set(0);
-    timeout(0);  // Non-blocking input
-   start_color();
-   use_default_colors();
-    nodelay(stdscr, TRUE);
     init_game();
 
     int sub_size = M / N;
