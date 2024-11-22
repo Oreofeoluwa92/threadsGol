@@ -88,4 +88,3 @@ while (gen < MAX) {
     return 0;
 }
 
-
