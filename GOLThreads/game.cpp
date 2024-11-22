@@ -50,13 +50,10 @@ void update_subregion(int start_row, int end_row, int start_col, int end_col) {
 void display_grid() {
     clear();
     for (int i = 0; i < M; i++) {
-    for (int j = 0; j < N; j++) {
-        if (grid[i][j] != next_grid[i][j]) {
-            mvprintw(i, j, "%c", next_grid[i][j] ? 'X' : ' ');
+        for (int j = 0; j < N; j++) {
+            mvaddch(i, j * 2, grid[i][j] ? 'X' : ' ');
         }
     }
+    refresh();
 }
-refresh();
-}
-
 
